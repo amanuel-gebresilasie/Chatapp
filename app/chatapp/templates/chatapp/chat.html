@@ -164,6 +164,8 @@ span {
 			ws.onclose = ()=>{
 				console.log("Connection Terminated!");
 			}
+                        ws.onerror = (er)=>{
+console.log(er);}
 		}else {
 			alert("your browser doesn't support websockets !");
 		}

@@ -117,7 +117,7 @@ span {
 		});
 		if ("WebSocket" in window){
 			// create new websocket object
-			var ws = new WebSocket("ws://localhost:6060");
+			var ws = new WebSocket("ws://chatapp-production-0a81.up.railway.app/");
 			// when connected to server
 			ws.onopen = ()=>{
 				console.log("Connection Stablished");

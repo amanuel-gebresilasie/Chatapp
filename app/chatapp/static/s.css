@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&dis        play=swap');
+
+.container {
+ 26     width: 100%;                                                    27     height: 100%;                                                   28     background-color: #121212;                                      29     display: flex;
+ 30     padding-bottom: 200px;                                          31     flex-direction: column;
+ 32     align-items: center;                                            33     overflow: auto;                                                 34 }
+ 35 .msg {                                                              36     width: 90%;                                                     37     background-color: rgba(50, 50, 50, 1);
+ 38     padding: 10px;                                                  39     margin-top: 10px;                                               40     border-radius: 10px;                                            41 }
+
+ .info {                                                             43     border-bottom: 2px solid gray;                                  44     display: flex;                                                  45     gap: 10px;                                                      46 }
+ 47 .content {                                                          48     color: rgba(200, 200, 200, 1);                                  49     padding: 5px;                                                   50 }
+ 51                                                                     52 input {
+ 53     position: absolute;                                             54     bottom: 0;                                                      55     left: 0;
+ 56     right: 0;                                                       57     width: 100%;                                                    58     height: 50px;
+ 59     background-color: red;                                          60 }

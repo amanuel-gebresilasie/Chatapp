@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ei=ie+b7$k39yvug-f2mctzqs-tc3!iy@oyfg)3$0n_l2z_(ck'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['chatapp-production-0a81.up.railway.app']
 

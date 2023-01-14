@@ -12,8 +12,10 @@ def chat(req):
 
 @csrf_exempt
 def save_msg(req):
-    if req.method == 'POST':
+    try:
        M = Msg(name=req.POST.get('name'),date=req.POST.get('date'),msg=req.POST.get('msg'))
        M.save()
        return HttpResponse("saved")
+    except:
+        return HttpResponse("not saved")
     return redirect("/")

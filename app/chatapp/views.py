@@ -20,6 +20,7 @@ def save_msg(req):
             date=req.POST.get("date"),
             msg=req.POST.get("msg"),
         )
+
         M.save()
         return HttpResponse("saved")
     except:

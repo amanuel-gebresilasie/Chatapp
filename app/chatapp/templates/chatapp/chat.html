@@ -57,7 +57,7 @@
 			left: 0;
 			width: 100%;
 			height: 50px;
-			background-color: red;
+			background-color: grey;
 		}
 
 		span {
@@ -162,7 +162,7 @@
 					SPAN.innerText = `${dict.msg}`;
 					DIV_MSG.appendChild(SPAN);
 					console.log("appended SPAN");
-					document.querySelctor(".container-fluid").appendChild(DIV_MSG);
+					document.querySelector(".container-fluid").appendChild(DIV_MSG);
 					console.log("appended MSG");
 					DIV_MSG.scrollIntoView({
 						behavior: "smooth"

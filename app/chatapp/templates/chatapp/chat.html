@@ -17,6 +17,7 @@ body {
 	height: 100vh;
 	background-color: black;
 	overflow: hidden;
+        padding-top: 10px;
 }
 
 .container-fluid {
@@ -117,6 +118,7 @@ span {
 			event.preventDefault();
 		});
 		if ("WebSocket" in window){
+                    function conn(){
 			// create new websocket object
 			var ws = new WebSocket("wss://chatapp-production-ebcf.up.railway.app/");
 			// when connected to server
@@ -163,9 +165,14 @@ span {
 			}
 			// when connection to server is closed
 			ws.onclose = (event)=>{
-            ws = new WebSocket("wss://chatapp-production-ebcf.up.railway.app/");
+                            conn();
+                            return;
 			}
                         ws.onerror = (er)=>{}
+                    }
+
+                   conn();
+
 		}else {
 			alert("your browser doesn't support websockets !");
 		}

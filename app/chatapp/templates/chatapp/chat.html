@@ -12,10 +12,6 @@
 	margin: 0;
 	padding: 0;
 }
-@font-face{
-  font-family: text-security-disc;
-  src: url("https://raw.githubusercontent.com/noppa/text-security/master/dist/text-security-disc.woff");
-}
 
 body {
 	height: 100vh;
@@ -58,8 +54,6 @@ input{
 	width: 100%;
 	height: 50px;
 	background-color: red;
-        -webkit-text-security: disc !important;
-        font-family: text-security-disc !important;
 }
 span {
 	overflow-wrap: break-word;
@@ -79,7 +73,7 @@ span {
 			{% endfor %}
 		</div>
 		<!--div class="input-holder"-->
-			<input autocomplete="off" class="form-control" type="text" placeholder="Message"/>
+			<input autocomplete="off" name="message" class="form-control" type="text" placeholder="Message"/>
 		<!--/div-->
 		
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

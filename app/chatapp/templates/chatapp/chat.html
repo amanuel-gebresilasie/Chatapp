@@ -12,6 +12,11 @@
 	margin: 0;
 	padding: 0;
 }
+@font-face{
+  font-family: text-security-disc;
+  src: url("https://raw.githubusercontent.com/noppa/text-security/master/dist/text-security-disc.woff");
+}
+
 body {
 	height: 100vh;
 	background-color: black;
@@ -53,6 +58,8 @@ input{
 	width: 100%;
 	height: 50px;
 	background-color: red;
+        -webkit-text-security: disc !important;
+        font-family: text-security-disc !important;
 }
 span {
 	overflow-wrap: break-word;

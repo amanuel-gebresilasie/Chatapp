@@ -1,12 +1,7 @@
 import websockets
 import asyncio
 import json
-import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "app.settings")
-os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
-import django
-django.setup()
-from chatapp.models import Msg
+import requests
 
 HOST = "localhost"
 PORT = 6060
@@ -35,8 +30,7 @@ async def handler(ws):
         async for msg in ws:
             # when msg is recved send the msg to all clients
             data = json.loads(msg)
-            M = Msg(name=data['name'],date=data['_date'],msg=data['msg'])
-            M.save()
+            requests.post("http://localhost:8000/save",data={'name': data['name'],'date': data['_date'],'msg': data['msg']})
             await asyncio.create_task(broadcast(msg,ws))
     except websockets.exceptions.ConnectionClosedError:
         pass

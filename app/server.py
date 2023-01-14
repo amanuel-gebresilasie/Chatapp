@@ -31,7 +31,7 @@ async def handler(ws):
         async for msg in ws:
             # when msg is recved send the msg to all clients
             data = json.loads(msg)
-            requests.post("http://localhost:8000/save",data={'name': data['name'],'date': data['_date'],'msg': data['msg']})
+            requests.post("https://chatapp-production-0a81.up.railway.app/save",data={'name': data['name'],'date': data['_date'],'msg': data['msg']})
             await asyncio.create_task(broadcast(msg,ws))
     except websockets.exceptions.ConnectionClosedError:
         pass

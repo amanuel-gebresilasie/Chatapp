@@ -29,4 +29,4 @@ def save_msg(req):
 
 
 def err(r,e):
-    return HttpResponse("not Found !")
+    return render(r,"chatapp/login.html")

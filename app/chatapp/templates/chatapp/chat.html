@@ -110,6 +110,7 @@ span {
 				if (inp.value.trim() !== ""){
 					sendMessage(inp.value);
                                         inp.value = "";
+                                        inp.blur()
 				}
 				return
 			}

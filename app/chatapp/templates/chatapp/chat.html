@@ -101,7 +101,6 @@ span {
 				msg: msg
 			}
 			data = JSON.stringify(data);
-                        alert(data);
 			ws.send(data);
 		}
 
@@ -121,11 +120,10 @@ span {
 			var ws = new WebSocket("wss://chatapp-production-ebcf.up.railway.app/");
 			// when connected to server
 			ws.onopen = ()=>{
-				alert("Connection Stablished");
+				console.log("Connection Stablished");
 			}
 			// when data is received 
 			ws.onmessage = (event)=>{
-				alert(event.data);
 				let dict = JSON.parse(event.data);
 				console.log(dict);
 
@@ -163,10 +161,9 @@ span {
 			}
 			// when connection to server is closed
 			ws.onclose = (event)=>{
-				console.log(event);
+            ws = new WebSocket("wss://chatapp-production-ebcf.up.railway.app/");
 			}
-                        ws.onerror = (er)=>{
-console.log(er);}
+                        ws.onerror = (er)=>{}
 		}else {
 			alert("your browser doesn't support websockets !");
 		}

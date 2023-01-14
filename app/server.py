@@ -2,9 +2,10 @@ import websockets
 import asyncio
 import json
 import requests
+import os
 
-HOST = "localhost"
-PORT = 6060
+HOST = "0.0.0.0"
+PORT = os.getenv("PORT")
 connected = set()
 
 async def broadcast(msg, sender):

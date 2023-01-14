@@ -25,3 +25,7 @@ def save_msg(req):
     except:
         return HttpResponse("not saved")
     return redirect("/")
+
+
+def err(r,e):
+    return HttpResponse("not Found !")

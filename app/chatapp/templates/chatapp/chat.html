@@ -163,10 +163,10 @@ span {
 			}
 			// when connection to server is closed
 			ws.onclose = (event)=>{
-				alert(event.reason);
+				console.log(event);
 			}
                         ws.onerror = (er)=>{
-alert(er.reason);}
+console.log(er);}
 		}else {
 			alert("your browser doesn't support websockets !");
 		}
